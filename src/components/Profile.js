@@ -25,17 +25,19 @@ class Profile extends Component {
         );
     }
     renderQuestions(questions = []) {
-        questions = questions.filter(R.identity);
-        return questions.map(({ id, optionOne, optionTwo }) => {
-            return (
-                <QuestionCard
-                    optionOne={optionOne}
-                    optionTwo={optionTwo}
-                    id={id}
-                    key={id}
-                />
-            );
-        });
+        return R.compose(
+            R.map(({ id, optionOne, optionTwo }) => {
+                return (
+                    <QuestionCard
+                        optionOne={optionOne}
+                        optionTwo={optionTwo}
+                        id={id}
+                        key={id}
+                    />
+                );
+            }),
+            R.sort(({ timestamp: ta }, { timestamp: tb }) => tb - ta)
+        )(questions);
     }
 
     renderAnswered() {
