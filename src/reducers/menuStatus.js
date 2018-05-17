@@ -1,4 +1,4 @@
-import { SET_MENU_STATUS } from '../actions/setMenuStatus';
+import { SET_MENU_STATUS } from '../actions/types';
 
 export default function(state = false, action) {
     switch (action.type) {

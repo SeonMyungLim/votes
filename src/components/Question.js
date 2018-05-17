@@ -1,5 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { bindActionCreators } from 'redux';
 import RaisedButton from 'material-ui/RaisedButton';
 import { connect } from 'react-redux';
 import { LoadingBar } from 'react-redux-loading-bar';
@@ -140,11 +139,10 @@ class Question extends Component {
 
     handleClick = () => {
         var {
-            submitAnswer,
             routeId,
             loginUser: { id },
         } = this.props;
-        submitAnswer({
+        this.props.submitAnswer({
             authedUser: id,
             qid: routeId,
             answer: this.state.selected,
@@ -166,10 +164,4 @@ function mapStateToProps({ questions, loginUser, users }, { match }) {
     };
 }
 
-function mapDispatchToProps(dispatch) {
-    return bindActionCreators({ submitAnswer }, dispatch);
-}
-
-export default withRouter(
-    connect(mapStateToProps, mapDispatchToProps)(Question)
-);
+export default withRouter(connect(mapStateToProps, { submitAnswer })(Question));

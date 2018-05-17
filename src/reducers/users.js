@@ -1,6 +1,4 @@
-import { SET_USERS } from '../actions/user';
-import { BUILD_QUESTION } from '../actions/buildQuestion';
-import { SUBMIT_ANSWER } from '../actions/submitAnswer';
+import { SET_USERS, BUILD_QUESTION, SUBMIT_ANSWER } from '../actions/types';
 import * as R from 'ramda';
 
 var getUser = R.prop('users');

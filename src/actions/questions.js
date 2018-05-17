@@ -1,4 +1,4 @@
-export const SET_QUESTIONS = 'SET_QUESTIONS';
+import { SET_QUESTIONS } from './types';
 
 export function setQuestions(questions) {
     return {

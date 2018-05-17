@@ -1,7 +1,7 @@
 import { _saveQuestion } from '../api';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 
-export const BUILD_QUESTION = 'BUILD_QUESTION';
+import { BUILD_QUESTION } from './types';
 
 function buildQuestion(payload) {
     return {

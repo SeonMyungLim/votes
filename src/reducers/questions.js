@@ -1,6 +1,4 @@
-import { SET_QUESTIONS } from '../actions/questions';
-import { SUBMIT_ANSWER } from '../actions/submitAnswer';
-import { BUILD_QUESTION } from '../actions/buildQuestion';
+import { SET_QUESTIONS, SUBMIT_ANSWER, BUILD_QUESTION } from '../actions/types';
 import * as R from 'ramda';
 
 var getQuestions = R.prop('questions');

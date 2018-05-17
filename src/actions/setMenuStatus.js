@@ -1,4 +1,4 @@
-export const SET_MENU_STATUS = 'SET_MENU_STATUS';
+import { SET_MENU_STATUS } from './types';
 
 export function setMenuStatus(value) {
     return {

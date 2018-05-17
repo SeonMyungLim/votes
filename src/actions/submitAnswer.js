@@ -1,7 +1,6 @@
 import { _saveQuestionAnswer } from '../api';
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
-
-export const SUBMIT_ANSWER = 'SUBMIT_ANSWER';
+import { SUBMIT_ANSWER } from './types';
 
 function submit(payload) {
     return {

@@ -1,6 +1,4 @@
-export const SET_LOGIN_USER = 'SET_LOGIN_USER';
-export const SET_USERS = 'SET_USERS';
-export const LOGOUT = 'LOGOUT';
+import { SET_LOGIN_USER, SET_USERS, LOGOUT } from './types';
 
 export function setUsers(users) {
     return {

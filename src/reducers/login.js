@@ -1,4 +1,4 @@
-import { SET_LOGIN_USER, LOGOUT } from '../actions/user';
+import { SET_LOGIN_USER, LOGOUT } from '../actions/types';
 import * as R from 'ramda';
 
 var getId = R.compose(R.prop('id'), R.prop('user'));
